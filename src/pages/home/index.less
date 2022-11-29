@@ -1,0 +1,709 @@
+:local(.home) {
+  background-color: #fff;
+  min-width: 1480px;
+
+  .home-wrap {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ellipsis-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  /*banner*/
+
+  /*.home-banner {
+    .pagination-wrap {
+      position: relative;
+
+      .swiper-slide {
+        img {
+          width: 100%;
+        }
+      }
+
+      .swiper-pagination {
+        left: 0;
+        bottom: 18px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 40px;
+        height: 2px;
+        margin-right: 8px;
+        background: #FFF;
+        opacity: 0.5;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }*/
+
+
+  .home-banner {
+    .banner-slider-wrap {
+      .banner-slide {
+        .bg-img{
+          height: 890px;
+          background-repeat:no-repeat;
+          background-position:center;
+          background-size: 100% 100%;
+        }
+      }
+
+      .pagination-wrap {
+        position: relative;
+        z-index: 999;
+      }
+
+      .banner-dots {
+        position: absolute;
+        left: 0;
+        bottom: 24px;
+        display: flex;
+      }
+
+      .banner-pagination {
+        width: 40px;
+        height: 4px;
+        margin-right: 8px;
+        background: #FFF;
+        opacity: 0.5;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      .slick-active {
+        .banner-pagination {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  /*模块公用*/
+
+  .func-module {
+    padding: 76px 0 36px;
+
+    .module-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .module-title {
+      h3 {
+        height: 40px;
+        line-height: 40px;
+        font-size: 30px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, .65);
+      }
+
+      h4 {
+        height: 22px;
+        line-height: 22px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, .25);
+      }
+    }
+
+    .module-more {
+      font-size: 16px;
+      color: rgba(0, 0, 0, .65);
+      cursor: pointer;
+
+      &:hover {
+        color: #1890FF;
+      }
+    }
+  }
+
+  /*新闻*/
+
+  .news-wrap {
+    display: flex;
+
+    .news-recommend {
+      display: block;
+      position: relative;
+      width: 670px;
+      height: 480px;
+      cursor: pointer;
+
+      &:hover {
+        img {
+          transform: scale(1.4);
+        }
+      }
+
+      .img-wrap {
+        overflow: hidden;
+      }
+
+      img {
+        width: 670px;
+        height: 480px;
+        transition: all 1s;
+      }
+
+      p {
+        position: absolute;
+        bottom: 0;
+        padding: 20px 24px;
+        line-height: 25px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+
+    .news-list {
+      flex: 1;
+      margin-left: 50px;
+      border-left: 1px solid #F1F1F1;
+
+      li {
+        position: relative;
+        height: 160px;
+        padding-left: 56px;
+        transition: padding .5s;
+
+        &:before {
+          content: "";
+          background-color: #D8D8D8;
+          position: absolute;
+          left: 0;
+          top: 28px;
+          height: 20px;
+          width: 3px;
+          transition: height .5s;
+        }
+
+        &:hover {
+          padding-left: 66px;
+
+          &:before {
+            height: 106px;
+          }
+        }
+
+        a {
+          display: block;
+          height: 100%;
+          padding: 20px 0;
+          border-bottom: 1px solid #F1F1F1;
+        }
+
+        &:last-child {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .news-title {
+        height: 28px;
+        line-height: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #303030;
+      }
+
+      .news-content {
+        height: 56px;
+        margin: 12px 0 3px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, .65);
+        line-height: 28px;
+      }
+
+      .news-time {
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, .45);
+      }
+    }
+
+    .news-list-empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /*通知公告*/
+
+  .notice-wrap {
+    .notice-list {
+      display: flex;
+
+      li {
+        width: calc(33% - 40px);
+        margin-right: 60px;
+
+        a {
+          display: block;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          .notice-title {
+            color: #1890FF;
+          }
+        }
+
+        a {
+          display: block;
+          padding: 16px 0 24px;
+        }
+      }
+    }
+
+    .notice-list-empty {
+      /*height: 164px;
+      display: flex;
+      justify-content: center;
+      align-items: center;*/
+    }
+
+    .notice-title {
+      height: 28px;
+      line-height: 28px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #303030;
+    }
+
+    .notice-content {
+      height: 56px;
+      margin: 12px 0 3px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, .65);
+      line-height: 28px;
+    }
+
+    .notice-time {
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, .45);
+    }
+  }
+
+  /*校园风采*/
+
+  .demeanor-module {
+    background-color: #F8F8F8;
+
+    .func-module {
+      padding: 58px 0 78px;
+    }
+
+    .demeanor-slider-container {
+      padding: 0 100px;
+    }
+
+    .demeanor-slider-content {
+      position: relative;
+    }
+
+    .slider-wrap-big {
+      width: 868px;
+      height: 660px;
+    }
+
+    .slider-box {
+      position: relative;
+      height: 660px;
+      cursor: pointer;
+
+      img {
+        width: 868px;
+        height: 560px;
+      }
+
+      .demeanor-info {
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        transform: translateY(-50%);
+        width: 740px;
+        height: 188px;
+        padding: 45px 56px 40px;
+        background-color: #fff;
+      }
+
+      .demeanor-title {
+        height: 28px;
+        line-height: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #303030;
+      }
+
+      .demeanor-content {
+        height: 56px;
+        line-height: 28px;
+        margin-top: 18px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, .65);
+      }
+    }
+
+    .slider-wrap-small {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      width: 459px;
+      height: 340px;
+    }
+
+    .slider-small-box {
+      position: relative;
+      height: 340px;
+      cursor: pointer;
+
+      img {
+        width: 459px;
+        height: 296px;
+      }
+    }
+
+    .demeanor-small-content {
+      position: absolute;
+      left: 0;
+      bottom: -44px;
+      transform: translateY(-50%);
+      width: 413px;
+      height: 88px;
+      line-height: 88px;
+      padding: 0 24px;
+      background-color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      color: #303030;
+    }
+
+    .slick-dots {
+      z-index: 100;
+      bottom: -42px;
+      width: 1220px;
+
+      li {
+        width: 30px;
+        height: 4px;
+        button {
+          width: 30px;
+          height: 4px;
+          border-radius: 2px;
+          padding: 0;
+          background-color: #D8D8D8;
+
+          &:before {
+            display: none;
+          }
+        }
+
+        &.slick-active {
+          button {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    .demeanor-list-empty {
+      margin-bottom: -32px;
+    }
+  }
+
+  /*招生报名 办事指南*/
+
+  .enrollment-module-wrap {
+
+    .enrollment-content {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: calc(50% - 30px);
+        border-bottom: 1px solid #F1F1F1;
+
+        &:nth-child(2n) {
+          margin-left: 60px;
+        }
+
+        &:hover {
+          .enrollment-title {
+            color: #1890FF;
+          }
+        }
+
+        a {
+          display: block;
+          padding: 18px 0;
+        }
+
+        .enrollment-title {
+          height: 28px;
+          line-height: 28px;
+          font-size: 20px;
+          font-weight: 500;
+          color: #303030;
+        }
+
+        .enrollment-time {
+          margin-top: 8px;
+          height: 25px;
+          line-height: 25px;
+          font-size: 14px;
+          color: rgba(0, 0, 0, .45);
+        }
+      }
+    }
+
+    .enrollment-content-empty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .ant-empty-normal {
+        margin: 24px 0;
+      }
+    }
+  }
+
+  /*推荐应用*/
+
+  .recommend-module {
+    .recommend-slide-wrap {
+      height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #F8F8F8;
+      }
+    }
+
+    .swiper-slide-active {
+      //background-color: #F8F8F8;
+    }
+
+
+    .app-expired {
+      &:before {
+        content: '已过期';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48px;
+        height: 22px;
+        line-height: 22px;
+        background: #FFB200;
+        border-radius: 0px 16px 0px 8px;
+        font-size: 12px;
+        color: #FFF;
+        text-align: center;
+      }
+    }
+
+    .icon-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background-color: #1890FF;
+      border-radius: 16px;
+    }
+
+    .recommend-icon {
+      font-size: 40px;
+      color: #fff;
+    }
+
+    .recommend-name {
+      height: 22px;
+      line-height: 22px;
+      margin-top: 24px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, .65);
+    }
+  }
+
+  /*教师风采*/
+
+  .teacher-module {
+    padding-bottom: 0;
+
+    .teacher-list {
+      display: flex;
+
+      li {
+        width: calc(25% - 24px);
+        margin-right: 32px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .img-wrap {
+          overflow: hidden;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.4);
+          }
+
+          h4 {
+            color: #1890FF;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 448px;
+        transition: all 1s;
+      }
+
+      h4 {
+        margin-top: 24px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, .65);
+        text-align: center;
+      }
+    }
+  }
+
+  /*精彩瞬间*/
+
+  .photo-module {
+    .photo-list {
+      display: flex;
+
+      li {
+        width: 336px;
+        margin-right: 32px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .img-container {
+          position: relative;
+          height: 336px;
+          cursor: pointer;
+
+          &:hover {
+            .photo-shadow-wrap {
+              display: block;
+            }
+          }
+        }
+
+        img.photo-item {
+          width: 100%;
+          height: 100%;
+        }
+
+        h4 {
+          margin-top: 24px;
+          text-align: center;
+          height: 28px;
+          font-size: 20px;
+          color: rgba(0, 0, 0, .65);
+          line-height: 28px;
+        }
+      }
+
+      .photo-shadow-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, .25);
+      }
+
+      .photo-shadow {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .play {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  }
+
+  /*友情链接*/
+
+  .link-module {
+    .link-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+
+      li {
+        margin-right: 120px;
+        height: 33px;
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 16px;
+
+        &:hover {
+          a {
+            color: #1890FF;
+          }
+        }
+      }
+
+      a {
+        color: #303030;
+      }
+    }
+  }
+
+}
